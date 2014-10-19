@@ -4,9 +4,9 @@
     $scope.isEditable = [];
 
     // get all Todos on Load
-    service.getTodos().then(function (data) {
-        if(!data.data.error)
-            $scope.todos = data.data;
+    service.getTodos().then(function (res) {
+        if(!res.data.error)
+            $scope.todos = res.data;
     });
 
     // Save a Todo to the server
@@ -14,10 +14,10 @@
         if ($event.which == 13 && $scope.todoInput) {
 
             service.saveTodo({
-                "todo": $scope.todoInput,
-                "isCompleted": false
-            }).then(function (data) {
-                $scope.todos.push(data.data);
+                todo: $scope.todoInput,
+                isCompleted: false
+            }).then(function (res) {
+                $scope.todos.push(res.data);
             });
             $scope.todoInput = '';
         }

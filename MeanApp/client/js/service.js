@@ -1,4 +1,4 @@
-﻿meanApp.factory('service', function ($http) {
+﻿meanApp.factory('service', ['$http', function ($http) {
     var urlBase = '/api/todos';
     var _todoService = {};
 
@@ -19,4 +19,4 @@
     };
 
     return _todoService;
-});
+}]);

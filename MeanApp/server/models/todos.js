@@ -1,12 +1,13 @@
-﻿var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
-var todosSchema = new Schema({
-    todo: String,
-    isCompleted: Boolean
-});
+﻿(function(){
+    'use strict';
+    var mongoose = require('mongoose');
+    var todosSchema = new mongoose.Schema({
+        todo: String,
+        isCompleted: Boolean
+    });
 
-var todosModel = mongoose.model('todos', todosSchema);
+    var todosModel = mongoose.model('todos', todosSchema);
+    
 
-module.exports = {
-    todosModel: todosModel
-};
+    module.exports = todosModel;
+})();

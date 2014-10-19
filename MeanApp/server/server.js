@@ -13,6 +13,10 @@
     
     var routes = require('./routes/index');
 
+    fs.readdirSync(__dirname + '/routes/api').forEach(function (filename) {
+        if (~filename.indexOf('.js')) require(__dirname + '/routes/api/' + filename);
+    });
+
     var app = express();
 
     // view engine setup

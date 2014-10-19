@@ -140,6 +140,8 @@
     <Compile Include="client\lib\jquery\src\var\toString.js" />
     <Compile Include="client\lib\jquery\src\wrap.js" />
     <Compile Include="gulpFile.js" />
+    <Compile Include="server\models\todos.js" />
+    <Compile Include="server\routes\api\todos.js" />
     <Compile Include="server\server.js" />
     <Compile Include="server\routes\index.js" />
     <Content Include=".bowerrc" />
@@ -257,6 +259,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="client\" />
+    <Folder Include="client\css\" />
+    <Folder Include="client\js\" />
     <Folder Include="client\lib\" />
     <Folder Include="client\lib\angular-route\" />
     <Folder Include="client\lib\angular\" />
@@ -293,10 +297,10 @@
     <Folder Include="client\lib\jquery\src\traversing\" />
     <Folder Include="client\lib\jquery\src\traversing\var\" />
     <Folder Include="client\lib\jquery\src\var\" />
-    <Folder Include="client\css\" />
-    <Folder Include="client\js\" />
     <Folder Include="client\views\" />
     <Folder Include="server\" />
+    <Folder Include="server\models\" />
+    <Folder Include="server\routes\api\" />
     <Folder Include="server\views\" />
     <Folder Include="server\routes\" />
   </ItemGroup>
